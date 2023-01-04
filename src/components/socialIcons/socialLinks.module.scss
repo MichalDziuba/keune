@@ -1,0 +1,49 @@
+.socialLinksWrapper {
+  display: flex;
+  position: relative;
+  width: 4.5rem;
+  height: 4.5rem;
+  &:hover {
+    transform: scale(1.5);
+    transition: all 0.2s ease-in-out;
+  }
+}
+.svg{
+    width: 2rem;
+    height: 2rem;
+    fill: red;
+}
+.icon {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  & img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &.facebook {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &.instagram {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &.twitter {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+
+  &.youtube {
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+}

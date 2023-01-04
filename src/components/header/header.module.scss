@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  width:100%;
+ position: fixed;
+ align-items: center;
+ justify-content: center;
+ background-color: gray;
+  height: 8rem;
+ 
+ &_menu{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+   & a{
+    font-size: 2rem;
+   }
+ }
+}
+.logo {
+  width: fit-content;
+  & h1{
+    display: none;
+  }
+  
+}
