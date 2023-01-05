@@ -1,0 +1,21 @@
+@use '../../App.module.scss' as mixin;
+.logo {
+  width: 9rem;
+  height: 3.3rem;
+  @include mixin.desktop{
+    width:16.5rem ;
+    height: 7rem;
+  }
+  & h1{
+    display: none;
+  }
+  & img{
+ width: 9rem;
+ height: 3.3rem;
+  @include mixin.desktop{
+    width:16.5rem ;
+    height: 7rem;
+  }
+  }
+  
+}

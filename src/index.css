@@ -2,9 +2,10 @@
 @import url("https://use.typekit.net/nsp8kav.css");
 @import-normalize;
 body {
-  font-family: minerva-modern,sans-serif;
+  font-family: 'Roboto',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   margin: 0 auto;
 }
 
 *{
@@ -12,13 +13,13 @@ body {
   list-style-type: none;
   text-decoration: none;
   padding: 0;
-  margin: 0 auto;
-  overflow: hidden;
   border: none;
 
 }
 button{
   box-sizing: border-box;
   background: transparent;
-  
 }
+
+
+

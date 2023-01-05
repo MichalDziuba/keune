@@ -1,40 +1,41 @@
-import logoKueneWhite from "../../icons/logo_KEUNE_WHITE.svg";
-import { SocialIcons } from "../socialIcons/socialLinks";
+import { useEffect, useRef, useState } from "react";
+import { Hamburger } from "../hamburger/hamburger";
+import { Logo } from "../logo/logo";
+import { Menu } from "../menu/menu";
 import styles from "./header.module.scss";
+import stylesHamburger from "../hamburger/hamburger.module.scss";
+import stylesMenu from "../menu/menu.module.scss";
 export const Header = () => {
+  const refMenu = useRef<HTMLUListElement>(null);
+  const refHamburger = useRef<HTMLDivElement>(null);
+  const [isMenuOpen, setOpen] = useState(false);
+  const toggleMenu = () => {
+    const burgerBtn = refHamburger.current!;
+    const menu = refMenu.current!;
+    if (menu.classList.contains(stylesMenu.out)) {
+      menu.classList.remove(stylesMenu.out);
+    }
+    if (!isMenuOpen) {
+      burgerBtn.classList.add(stylesHamburger.open);
+      menu.classList.add(stylesMenu.active);
+      setOpen(true);
+    } else {
+      menu.classList.add(stylesMenu.out);
+      burgerBtn.classList.remove(stylesHamburger.open);
+      menu.classList.remove(stylesMenu.active);
+
+      setOpen(false);
+    }
+  };
+ 
+
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
-        <img src={logoKueneWhite} alt="logo"></img>
-        <h1>Keune Polska</h1>
-      </div>
-      <div>
-        <ul className={styles.header_menu}>
-          <li>
-            <a href="/nowości">Nowości</a>
-          </li>
-          <li>
-            <a href="/nowości">Produkty</a>
-          </li>
-          <li>
-            <a href="/nowości">Trendy</a>
-          </li>
-          <li>
-            <a href="/nowości">O firmie</a>
-          </li>
-          <li>
-            <a href="/nowości">Salony</a>
-          </li>
-          <li>
-            <a href="/nowości">Dystrybutorzy</a>
-          </li>
-          <li>
-            <a href="/nowości">Kontakt</a>
-          </li>
-        </ul>
-      </div>
+      <Logo />
 
-      <SocialIcons />
+      <Menu refMenu={refMenu} />
+
+      <Hamburger toggleMenu={toggleMenu} refButton={refHamburger} />
     </header>
   );
 };

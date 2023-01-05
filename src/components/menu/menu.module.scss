@@ -1,0 +1,87 @@
+@use "../../App.module.scss" as mixin;
+.menu {
+  position: absolute;
+  top: 0;
+  right: -2.5vw;
+  width: mixin.$width-mobile-menu;
+  height:mixin.$height-full ;
+  max-height: mixin.$height-full;
+  background: mixin.$color-black;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  visibility: hidden;
+  margin: 0;
+   @include mixin.desktop{
+   visibility: visible;
+   position: unset;
+   display: flex;
+   flex-direction: row;
+   background: inherit;
+   width: mixin.$width-mobile-menu;
+   height: inherit;
+   
+  }
+
+  & a {
+    color: mixin.$color-white;
+    font-size: 2rem;
+    font-weight: 400;
+    &:hover {
+      color: rgb(85, 72, 1);
+    }
+  }
+}
+// .dropdown{
+//   display: flex;
+//   flex-direction: column;
+//   position: relative;
+//   & ul{
+//     position: absolute;
+//     height: fit-content;
+//     width: inherit;
+   
+//     display: flex;
+//     flex-direction: column;
+//     text-align: left;
+//     align-items: center;
+//     top: 4rem;
+    
+//     background: #000;
+//   }
+// }
+
+.active {
+  visibility: visible;
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.out {
+  visibility: visible;
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: translateX(100%) scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: translateX(0) scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes unfoldOut {
+  0% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: translateX(0) scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: translateX(100%) scaleY(0.005) scaleX(0);
+  }
+}

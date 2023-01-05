@@ -1,0 +1,57 @@
+@use '../../App.module.scss' as mixin;
+.hamburger {
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+   @include mixin.desktop{
+   display: none;
+  }
+  &_button {
+  width: 3.5rem;
+  height: 0.5rem;
+  background: mixin.$color-white;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+
+  
+}
+}
+
+.hamburger_button::before,
+.hamburger_button::after {
+  content: "";
+  background: mixin.$color-white;
+  position: absolute;
+  left: 0;
+  width: 3.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.hamburger_button::before {
+  transform: translateY(-1.3rem);
+}
+.hamburger_button::after {
+  transform: translateY(1.3rem);
+}
+
+.open .hamburger_button {
+  transform: translateX(-5rem);
+  background: transparent;
+  box-shadow: none;
+}
+.open .hamburger_button::before {
+  transform: rotate(45deg) translate(3.5rem, -3.5rem);
+  background: mixin.$color-white;;
+}
+.open .hamburger_button::after {
+  transform: rotate(-45deg) translate(3.5rem, 3.5rem);
+  background: mixin.$color-white;;
+}

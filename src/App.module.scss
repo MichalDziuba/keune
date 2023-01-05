@@ -1,6 +1,28 @@
-.app{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    background-color: gray;
+
+
+$color-white: rgb(255, 255, 255);
+$color-black: rgb(0, 0, 0);
+$width-full: 100vw;
+$height-full: 100vh;
+$width-mobile-menu: 65vw;
+$width-content:95vw;
+
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  width: $width-full;
+  background-color: gray;
+  align-items: center;
+  position: relative;
 }
