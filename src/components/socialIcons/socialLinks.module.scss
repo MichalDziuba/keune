@@ -1,12 +1,13 @@
+@use '../../sass/global.scss';
+@use '../../sass//variables.scss';
 .socialLinksWrapper {
   display: flex;
   position: relative;
   width: 4.5rem;
   height: 4.5rem;
-  color:white;
-  &:hover {
-    transform: scale(1.5);
     transition: all 0.2s ease-in-out;
+  &:hover {
+     transform: scale(1.5) rotate(360deg);
   }
 }
 
@@ -14,9 +15,8 @@
   position: absolute;
   width: 1.5rem;
   height: 1.5rem;
-  fill: white; //COLOR
   &:hover{
-    fill: rgb(128, 108, 0);
+    fill: variables.$color-hoverBtn;
   }
 
   &.facebook {

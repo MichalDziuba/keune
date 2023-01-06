@@ -5,10 +5,16 @@ import { Menu } from "../menu/menu";
 import styles from "./header.module.scss";
 import stylesHamburger from "../hamburger/hamburger.module.scss";
 import stylesMenu from "../menu/menu.module.scss";
-export const Header = () => {
+
+
+type headerProps = {
+  isDark: boolean;
+};
+export const Header = ({ isDark }: headerProps) => {
   const refMenu = useRef<HTMLUListElement>(null);
   const refHamburger = useRef<HTMLDivElement>(null);
   const [isMenuOpen, setOpen] = useState(false);
+
   const toggleMenu = () => {
     const burgerBtn = refHamburger.current!;
     const menu = refMenu.current!;
@@ -27,15 +33,26 @@ export const Header = () => {
       setOpen(false);
     }
   };
- 
+  const [navBarTransparent, setNavBarTransparent] = useState(false);
 
+  const changeBackground = () => {
+    if (window.scrollY > 100) {
+      console.log(navBarTransparent);
+      setNavBarTransparent(false);
+    } else {
+      console.log(navBarTransparent);
+      setNavBarTransparent(true);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
+  // className={`${styles.header} ${navBarTransparent ? styles._transparent : styles._black}`}
   return (
-    <header className={styles.header}>
-      <Logo />
-
-      <Menu refMenu={refMenu} />
-
-      <Hamburger toggleMenu={toggleMenu} refButton={refHamburger} />
-    </header>
+    <div className={styles.header}>
+      <Logo isDark={isDark} />
+      <Menu refMenu={refMenu} isDark={isDark} />
+      <Hamburger toggleMenu={toggleMenu} refButton={refHamburger} isDark={isDark} />
+    </div>
   );
 };

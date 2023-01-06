@@ -1,87 +1,140 @@
-@use "../../App.module.scss" as mixin;
+@use "../../sass/animations.scss";
+@use "../../sass/global.scss";
+@use "../../sass/variables.scss";
 .menu {
   position: absolute;
   top: 0;
   right: -2.5vw;
-  width: mixin.$width-mobile-menu;
-  height:mixin.$height-full ;
-  max-height: mixin.$height-full;
-  background: mixin.$color-black;
-  opacity: 0.8;
+  width: global.$width-mobile-menu;
+  height: global.$height-fullScreen;
+  max-height: global.$height-fullScreen;
+  background: variables.$bg-dark;
+  color: variables.$color-white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   visibility: hidden;
   margin: 0;
-   @include mixin.desktop{
-   visibility: visible;
-   position: unset;
-   display: flex;
-   flex-direction: row;
-   background: inherit;
-   width: mixin.$width-mobile-menu;
-   height: inherit;
-   
-  }
-
-  & a {
-    color: mixin.$color-white;
-    font-size: 2rem;
-    font-weight: 400;
-    &:hover {
-      color: rgb(85, 72, 1);
-    }
+  transition: 400ms cubic-bezier(1, 0.08, 0.33, 0.95);
+  @include global.desktop {
+    visibility: visible;
+    position: unset;
+    display: flex;
+    flex-direction: row;
+    background: none;
+    width: global.$width-mobile-menu;
+    height: inherit;
   }
 }
-// .dropdown{
-//   display: flex;
-//   flex-direction: column;
-//   position: relative;
-//   & ul{
-//     position: absolute;
-//     height: fit-content;
-//     width: inherit;
-   
-//     display: flex;
-//     flex-direction: column;
-//     text-align: left;
-//     align-items: center;
-//     top: 4rem;
-    
-//     background: #000;
-//   }
-// }
+.link {
+  font-size: 2rem;
+  font-weight: 400;
+  color: variables.$color-white;
+  &:hover {
+    color: variables.$color-hoverBtn;
+  }
+  @include global.desktop{
+    &._dark {
+    color: variables.$color-black;
+  }
+  &._light {
+    color: variables.$color-white;
+  }
+  }
+  
+}
+.products_list {
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.arrow_light::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-227deg);
+  width: 0.9rem;
+  height: 0.2rem;
+  background-color: variables.$color-white;
+  transform-origin: 100% 50%;
+  transition: 400ms cubic-bezier(1, 0.08, 0.33, 0.95);
+}
+
+.arrow_light::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3.5rem;
+  left: 51%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 0.9rem;
+  height: 0.2rem;
+  background-color: variables.$color-white;
+  transform-origin: 100% 50%;
+  transition: 400ms cubic-bezier(1, 0.08, 0.33, 0.95);
+}
+.arrow_dark::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-227deg);
+  width: 0.9rem;
+  height: 0.2rem;
+  background-color: variables.$color-black;
+  transform-origin: 100% 50%;
+  transition: 400ms cubic-bezier(1, 0.08, 0.33, 0.95);
+}
+
+.arrow_dark::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3.5rem;
+  left: 51%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 0.9rem;
+  height: 0.2rem;
+  background-color: variables.$color-black;
+  transform-origin: 100% 50%;
+  transition: 400ms cubic-bezier(1, 0.08, 0.33, 0.95);
+}
+
+.dropdown:hover .products_list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 4rem;
+  height: max-content;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.dropdown:hover .arrow::after,
+.dropdown:hover .arrow::before {
+  background-color: variables.$color-hoverBtn;
+}
+
+.dropdown_wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
 .active {
   visibility: visible;
-  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: animations.$unfoldIn;
 }
+
 .out {
   visibility: visible;
-  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-
-@keyframes unfoldIn {
-  0% {
-    transform: translateX(100%) scaleY(0.005) scaleX(0);
-  }
-  50% {
-    transform: translateX(0) scaleY(0.005) scaleX(1);
-  }
-  100% {
-    transform: translateX(0) scaleY(1) scaleX(1);
-  }
-}
-
-@keyframes unfoldOut {
-  0% {
-    transform: translateX(0) scaleY(1) scaleX(1);
-  }
-  50% {
-    transform: translateX(0) scaleY(0.005) scaleX(1);
-  }
-  100% {
-    transform: translateX(100%) scaleY(0.005) scaleX(0);
-  }
+  animation: animations.$unfoldOut;
 }

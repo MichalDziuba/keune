@@ -1,8 +1,10 @@
+@use '../../sass/global.scss';
+
 .section_wrapper img{
     background:url("../../images/slide1-big.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 100%;
+    width:  global.$width-full;
     
 }

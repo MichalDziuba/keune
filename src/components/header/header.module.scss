@@ -1,15 +1,32 @@
-@use "../../App.module.scss" as mixin;
+@use '../../sass/animations.scss';
+@use '../../sass/global.scss';
+@use '../../sass/variables.scss';
 
 .header {
   display: flex;
-  width: mixin.$width-content;
+   width: calc(global.$width-full - 5vw);
+  margin: 0 2.5vw;
   position: fixed;
   align-items: center;
   justify-content: space-between;
-  background-color: transparent;
+  padding: 0 2.5vw;
   height: 6rem;
- @include mixin.desktop{
+  color: red;
+  transition: all 0.2s ease-in-out;
+
+&._black{
+  background-color: variables.$bg-dark;
+  color:variables.$color-white;
+  
+}
+&._transparent{
+  background-color: variables.$bg-transparent;
+ color: variables.$color-black;
+}
+
+ @include global.desktop{
     height: 8rem;
   }
+  
 
 }

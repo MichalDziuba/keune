@@ -1,5 +1,6 @@
-@use '../../App.module.scss' as mixin;
-.hamburger {
+@use '../../sass/global.scss';
+@use '../../sass/variables.scss';
+.hamburger_light {
   background-color: transparent;
   position: relative;
   display: flex;
@@ -9,25 +10,25 @@
   height: 3.5rem;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-   @include mixin.desktop{
+   @include global.desktop{
    display: none;
   }
-  &_button {
+}
+  .hamburger_button_light {
   width: 3.5rem;
   height: 0.5rem;
-  background: mixin.$color-white;
+  background: variables.$color-white;
   border-radius: 0.5rem;
   transition: all 0.5s ease-in-out;
   position: relative;
 
   
 }
-}
 
-.hamburger_button::before,
-.hamburger_button::after {
+.hamburger_button_light::before,
+.hamburger_button_light::after {
   content: "";
-  background: mixin.$color-white;
+  background: variables.$color-white;
   position: absolute;
   left: 0;
   width: 3.5rem;
@@ -35,23 +36,83 @@
   border-radius: 0.5rem;
   transition: all 0.5s ease-in-out;
 }
-.hamburger_button::before {
+.hamburger_button_light::before {
   transform: translateY(-1.3rem);
 }
-.hamburger_button::after {
+.hamburger_button_light::after {
   transform: translateY(1.3rem);
 }
 
-.open .hamburger_button {
+.open .hamburger_button_light {
   transform: translateX(-5rem);
   background: transparent;
   box-shadow: none;
 }
-.open .hamburger_button::before {
+.open .hamburger_button_light::before {
   transform: rotate(45deg) translate(3.5rem, -3.5rem);
-  background: mixin.$color-white;;
+  background: variables.$color-white;;
 }
-.open .hamburger_button::after {
+.open .hamburger_button_light::after {
   transform: rotate(-45deg) translate(3.5rem, 3.5rem);
-  background: mixin.$color-white;;
+  background: variables.$color-white;;
+}
+
+
+/////////////////////////////////
+
+.hamburger_dark {
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+   @include global.desktop{
+   display: none;
+  }
+}
+  .hamburger_button_dark {
+  width: 3.5rem;
+  height: 0.5rem;
+  background: variables.$color-black;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+
+  
+}
+
+.hamburger_button_dark::before,
+.hamburger_button_dark::after {
+  content: "";
+  background: variables.$color-black;
+  position: absolute;
+  left: 0;
+  width: 3.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.hamburger_button_dark::before {
+  transform: translateY(-1.3rem);
+}
+.hamburger_button_dark::after {
+  transform: translateY(1.3rem);
+}
+
+.open .hamburger_button_dark {
+  transform: translateX(-5rem);
+  background: transparent;
+  box-shadow: none;
+}
+.open .hamburger_button_dark::before {
+  transform: rotate(45deg) translate(3.5rem, -3.5rem);
+  background: variables.$color-white;
+}
+.open .hamburger_button_dark::after {
+  transform: rotate(-45deg) translate(3.5rem, 3.5rem);
+  background: variables.$color-white;
 }

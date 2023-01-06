@@ -1,4 +1,5 @@
+@use '../../sass/global.scss';
 .section_wrapper{
-    height: 100vh;
-    width: 100vw;
+    height: global.$width-full;
+    width: global.$width-full;
 }
