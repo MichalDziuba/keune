@@ -1,0 +1,57 @@
+
+@use "../../sass/global.scss";
+@use "../../sass/variables.scss";
+
+.content_wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  
+  &._dark{
+color: variables.$color-dark;
+  transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+  }
+  &._light{
+    color:variables.$color-light;
+      transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+  }
+}
+
+.content_title {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  font-size: 9rem;
+  letter-spacing: 0.5rem;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  font-weight: 200;
+  margin: 0;
+  margin-bottom: 1rem;
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-45%, -40%) rotate(135deg);
+    width: 110%;
+    height: 1px;
+    background: variables.$color-grey;
+    content: "";
+    z-index: -1;
+  }
+}
+.content_text {
+  font-size: 4rem;
+  margin: 0;
+  word-spacing: 0.2rem;
+  letter-spacing: 0.2rem;
+}
+.content_keune {
+  font-size: 3rem;
+  & span {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}

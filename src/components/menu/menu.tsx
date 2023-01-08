@@ -24,18 +24,20 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
       <li className={styles.dropdown}>
         <div className={styles.dropdown_wrapper}>
           <a
-            href="/nowości"
+            href="/produkty"
             className={`${styles.link} ${
               isDark ? styles._dark : styles._light
             }`}
           >
             Produkty
           </a>
-          <span className={isDark?styles.arrow_dark:styles.arrow_light}></span>
+          <span
+            className={isDark ? styles.arrow_dark : styles.arrow_light}
+          ></span>
           <ul className={styles.products_list}>
             <li>
               <a
-                href=""
+                href="/szampony"
                 className={`${styles.link} ${
                   isDark ? styles._dark : styles._light
                 }`}
@@ -44,23 +46,23 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
               </a>
             </li>
             <li>
-              <a href="">Odżywki</a>
+              <a href="/odzywki">Odżywki</a>
             </li>
             <li>
-              <a href="">Maski</a>
+              <a href="/maski">Maski</a>
             </li>
             <li>
-              <a href="">Pianki</a>
+              <a href="/pianki">Pianki</a>
             </li>
             <li>
-              <a href="">Żele</a>
+              <a href="/zele">Żele</a>
             </li>
           </ul>
         </div>
       </li>
       <li>
         <a
-          href="/nowości"
+          href="/Trendy"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
           Trendy
@@ -68,7 +70,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
       </li>
       <li>
         <a
-          href="/nowości"
+          href="/o-firmie"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
           O firmie
@@ -76,7 +78,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
       </li>
       <li>
         <a
-          href="/nowości"
+          href="/salony"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
           Salony
@@ -84,7 +86,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
       </li>
       <li>
         <a
-          href="/nowości"
+          href="/dystrybutorzy"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
           Dystrybutorzy

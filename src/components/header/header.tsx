@@ -33,21 +33,8 @@ export const Header = ({ isDark }: headerProps) => {
       setOpen(false);
     }
   };
-  const [navBarTransparent, setNavBarTransparent] = useState(false);
 
-  const changeBackground = () => {
-    if (window.scrollY > 100) {
-      console.log(navBarTransparent);
-      setNavBarTransparent(false);
-    } else {
-      console.log(navBarTransparent);
-      setNavBarTransparent(true);
-    }
-  };
-
-  window.addEventListener("scroll", changeBackground);
-
-  // className={`${styles.header} ${navBarTransparent ? styles._transparent : styles._black}`}
+ 
   return (
     <div className={styles.header}>
       <Logo isDark={isDark} />

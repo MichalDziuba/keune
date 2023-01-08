@@ -1,10 +1,34 @@
-@use '../../sass/global.scss';
+@use "../../sass/global.scss";
+@use "../../sass/variables.scss";
 
-.section_wrapper img{
-    background:url("../../images/slide1-big.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width:  global.$width-full;
-    
+.o1_section {
+  width: global.$width-fullScreen;
+  max-width: global.$width-fullScreen;
+  height: global.$height-fullScreen;
+  background-color: variables.$color-grey;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
+.o1_content {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 80vw;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+
+}
+
+
+ 

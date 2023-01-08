@@ -1,0 +1,160 @@
+@use "../../sass//variables.scss";
+@use "../../sass/animations.scss";
+.slider_controls_wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.slider__arrows {
+  display: flex;
+  width: 33%;
+  justify-content: space-around;
+  align-items: center;
+
+  &_line {
+    width: 70%;
+    content: "";
+    height: 2px;
+    transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+    &._dark {
+      background: variables.$color-grey-dark;
+      animation: animations.$spread;
+    }
+    &._light {
+      background: variables.$color-grey;
+      animation: animations.$spread;
+    }
+  }
+  &_icon {
+    border: solid 0.2rem;
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+
+    &._dark {
+      border-color: variables.$color-grey-dark;
+    }
+    &._light {
+      border-color: variables.$color-grey;
+    }
+  }
+  &_svg {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &._dark {
+      fill: variables.$color-grey-dark;
+    }
+    &._light {
+      fill: variables.$color-grey;
+    }
+  }
+}
+.controls {
+  width: 33%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.controls__buttons {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 4rem;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+.button_arrow_icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  &:hover {
+    scale: 1.2;
+    fill: variables.$color-hoverBtn;
+  }
+  &._dark {
+    transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+    fill: variables.$color-dark;
+  }
+  &._light {
+    transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+    fill: variables.$color-light;
+  }
+}
+.controls_select {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  &._dark::after {
+    position: absolute;
+    top: 2.5rem;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: variables.$color-grey-dark;
+    transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+  }
+  &._light::after {
+    position: absolute;
+    top: 2.5rem;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: variables.$color-grey;
+    transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+  }
+}
+.selected_button_icon {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+.selected_button {
+  position: relative;
+  &._dark::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.15rem;
+    //  border-radius: 5px;
+    background-color: variables.$color-dark;
+    position: absolute;
+    bottom: -10px;
+    animation: animations.$spread;
+  }
+  &._light::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.15rem;
+    background-color: variables.$color-light;
+    position: absolute;
+    bottom: -10px;
+    animation: animations.$spread;
+  }
+}
+
+.button_circle {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 3px solid;
+  border-radius: 50%;
+  margin: 0;
+  transform: scale(0.5);
+  margin-bottom: -1px;
+  &._dark {
+    border-color: variables.$color-dark;
+  }
+  &._light {
+    border-color: variables.$color-light;
+  }
+}

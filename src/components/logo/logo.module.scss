@@ -1,6 +1,7 @@
 @use '../../sass/global.scss';
 @use '../../sass/variables.scss';
 .logo {
+  
   width: 9rem;
   height: 3.3rem;
   @include global.desktop{

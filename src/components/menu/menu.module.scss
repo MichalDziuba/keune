@@ -9,14 +9,14 @@
   height: global.$height-fullScreen;
   max-height: global.$height-fullScreen;
   background: variables.$bg-dark;
-  color: variables.$color-white;
+  color: variables.$color-light;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   visibility: hidden;
   margin: 0;
-  transition: 400ms cubic-bezier(1, 0.08, 0.33, 0.95);
+  transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
   @include global.desktop {
     visibility: visible;
     position: unset;
@@ -30,16 +30,26 @@
 .link {
   font-size: 2rem;
   font-weight: 400;
-  color: variables.$color-white;
+  color: variables.$color-light;
   &:hover {
     color: variables.$color-hoverBtn;
   }
   @include global.desktop{
     &._dark {
-    color: variables.$color-black;
+        transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+    color: variables.$color-dark;
+    &:hover {
+        transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+    color: variables.$color-hoverBtn;
   }
-  &._light {
-    color: variables.$color-white;
+  }
+  &._light {  transition: 400ms cubic-bezier(1, 0.08, 0.33, 0.95);
+
+    color: variables.$color-light;
+    &:hover {
+        transition: 400ms cubic-bezier(1, 0.08, 0.33, 0.95);
+    color: variables.$color-hoverBtn;
+  }
   }
   }
   
@@ -64,7 +74,7 @@
   transform: translate(-50%, -50%) rotate(-227deg);
   width: 0.9rem;
   height: 0.2rem;
-  background-color: variables.$color-white;
+  background-color: variables.$color-light;
   transform-origin: 100% 50%;
   transition: 400ms cubic-bezier(1, 0.08, 0.33, 0.95);
 }
@@ -78,7 +88,7 @@
   transform: translate(-50%, -50%) rotate(45deg);
   width: 0.9rem;
   height: 0.2rem;
-  background-color: variables.$color-white;
+  background-color: variables.$color-light;
   transform-origin: 100% 50%;
   transition: 400ms cubic-bezier(1, 0.08, 0.33, 0.95);
 }
@@ -91,7 +101,7 @@
   transform: translate(-50%, -50%) rotate(-227deg);
   width: 0.9rem;
   height: 0.2rem;
-  background-color: variables.$color-black;
+  background-color: variables.$color-dark;
   transform-origin: 100% 50%;
   transition: 400ms cubic-bezier(1, 0.08, 0.33, 0.95);
 }
@@ -105,7 +115,7 @@
   transform: translate(-50%, -50%) rotate(45deg);
   width: 0.9rem;
   height: 0.2rem;
-  background-color: variables.$color-black;
+  background-color: variables.$color-dark;
   transform-origin: 100% 50%;
   transition: 400ms cubic-bezier(1, 0.08, 0.33, 0.95);
 }
