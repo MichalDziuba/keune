@@ -1,7 +1,13 @@
-import bgImage from "../../images/slide1-big.jpg";
-import bgImage2 from "../../images/slide2-big.jpg";
-
+import bgImage from "../images/slide1-big.jpg";
+import bgImage2 from "../images/slide2-big.jpg";
+import bgImage3 from "../images/slide3-big.jpg";
 export const bgImages = [
+  {
+    imageUrl: bgImage3,
+    isDark: false,
+    text1: "Dla mężczyzn.",
+    text2: "By czuć się swobodnie",
+  },
   {
     imageUrl: bgImage,
     isDark: true,

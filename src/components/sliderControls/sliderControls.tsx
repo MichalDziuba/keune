@@ -2,7 +2,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import logoWhite from "../../icons/znak_keune_WHITE.svg";
 import logoBlack from "../../icons/znak_keune.svg";
 import styles from "./sliderControls.module.scss";
-import { bgImages } from "../../data/images/images";
+import { bgImages } from "../../data/images";
 
 type SliderControlsProps = {
   handleLeftArrow: () => void;
@@ -22,12 +22,23 @@ export const SliderControls = ({
   return (
     <div className={styles.slider_controls_wrapper}>
       <div className={styles.slider__arrows}>
-      
-        <div className={`${styles.slider__arrows_line} ${isDark?styles._dark:styles._light}`}></div>
-        <a href="/next-section" className={`${styles.slider__arrows_icon} ${isDark?styles._dark:styles._light}`}>
-          <IoIosArrowForward className={`${styles.slider__arrows_svg} ${isDark?styles._dark:styles._light}`} />
-          </a>
-      
+        <div
+          className={`${styles.slider__arrows_line} ${
+            isDark ? styles._dark : styles._light
+          }`}
+        ></div>
+        <a
+          href="/next-section"
+          className={`${styles.slider__arrows_icon} ${
+            isDark ? styles._dark : styles._light
+          }`}
+        >
+          <IoIosArrowForward
+            className={`${styles.slider__arrows_svg} ${
+              isDark ? styles._dark : styles._light
+            }`}
+          />
+        </a>
       </div>
       <div className={styles.controls}>
         <div className={styles.controls__buttons}>
@@ -46,7 +57,11 @@ export const SliderControls = ({
             />
           </button>
         </div>
-        <div className={`${styles.controls_select} ${isDark?styles._dark:styles._light}`}>
+        <div
+          className={`${styles.controls_select} ${
+            isDark ? styles._dark : styles._light
+          }`}
+        >
           {bgImages.map((e, idx) => (
             <button key={idx} onClick={() => setSelectedBackground(idx)}>
               {bgImageIndex === idx ? (

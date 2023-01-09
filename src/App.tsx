@@ -7,7 +7,7 @@ import { O2 } from './components/o2_section/o2';
 
 const App = () => {
 
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(false);
 
   return (
     <div className={styles.App}>
