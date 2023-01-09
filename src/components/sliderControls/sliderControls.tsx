@@ -2,9 +2,9 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import logoWhite from "../../icons/znak_keune_WHITE.svg";
 import logoBlack from "../../icons/znak_keune.svg";
 import styles from "./sliderControls.module.scss";
+import { bgImages } from "../../data/images/images";
 
 type SliderControlsProps = {
-  images: object[];
   handleLeftArrow: () => void;
   handleRightArrow: () => void;
   bgImageIndex: number;
@@ -16,7 +16,7 @@ export const SliderControls = ({
   handleLeftArrow,
   handleRightArrow,
   setSelectedBackground,
-  images,
+
   isDark,
 }: SliderControlsProps) => {
   return (
@@ -47,7 +47,7 @@ export const SliderControls = ({
           </button>
         </div>
         <div className={`${styles.controls_select} ${isDark?styles._dark:styles._light}`}>
-          {images.map((e, idx) => (
+          {bgImages.map((e, idx) => (
             <button key={idx} onClick={() => setSelectedBackground(idx)}>
               {bgImageIndex === idx ? (
                 <div
