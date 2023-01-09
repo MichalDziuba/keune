@@ -18,18 +18,25 @@ color: variables.$color-dark;
   }
 }
 
+
 .content_title {
   display: inline-block;
   width: fit-content;
   height: fit-content;
-  font-size: 9rem;
+  font-size: 6rem;
   letter-spacing: 0.5rem;
   position: relative;
   text-align: center;
   z-index: 0;
-  font-weight: 200;
-  margin: 0;
+  font-weight: 400;
   margin-bottom: 1rem;
+  @include global.tablet{
+    font-size: 7rem;
+  }
+  @include global.desktop{
+    font-size: 9rem;
+    
+  }
   &::after {
     position: absolute;
     top: 50%;
@@ -43,15 +50,34 @@ color: variables.$color-dark;
   }
 }
 .content_text {
-  font-size: 4rem;
+  font-size: 2rem;
   margin: 0;
   word-spacing: 0.2rem;
   letter-spacing: 0.2rem;
-}
-.content_keune {
-  font-size: 3rem;
-  & span {
+   @include global.tablet{
     font-size: 3rem;
-    font-weight: 600;
+  }
+  @include global.desktop{
+    font-size: 4rem;
   }
 }
+.content_keune {
+  font-size: 1.8rem;
+  @include global.tablet{
+    font-size: 2rem;
+  }
+  @include global.desktop{
+    font-size:3rem;
+  }
+  & span {
+    font-size: 1.8rem;
+    font-weight: 500;
+    @include global.tablet{
+    font-size: 2rem;
+  }
+   @include global.desktop{
+    font-size: 3rem;
+  }
+  }
+}
+

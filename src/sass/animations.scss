@@ -1,6 +1,21 @@
-$unfoldIn:unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-$unfoldOut:unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+$unfoldIn: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+$unfoldOut: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 $spread: spread 0.5s ease-out;
+$imageChangeColor: colorChangeBackground 2s ease-in-out;
+
+@keyframes colorChangeBackground {
+  0% {
+    filter: grayscale(0%);
+  }
+
+  50% {
+    filter: grayscale(100%);
+  }
+
+  100% {
+    filter: grayscale(0%);
+  }
+}
 
 @keyframes unfoldIn {
   0% {

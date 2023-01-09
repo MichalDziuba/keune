@@ -3,32 +3,36 @@
 
 .o1_section {
   width: global.$width-fullScreen;
-  max-width: global.$width-fullScreen;
+  max-width: global.$width-full;
   height: global.$height-fullScreen;
   background-color: variables.$color-grey;
   background-size: cover;
   background-position: center;
-  overflow-x: hidden;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+  position: relative;
 }
 .o1_content {
   position: absolute;
-  top: 30%;
+  bottom: 12vh;
   left: 10%;
   width: 80vw;
-  height: 40%;
+  height: 35vh;
   display: flex;
   flex-direction: column;
+
+ @include global.tablet{
+  height: 45vh;
+ }
 }
 
 .content {
   display: flex;
   justify-content: center;
-
 }
 
 
- 
+

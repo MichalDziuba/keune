@@ -1,11 +1,12 @@
 @use './sass/global.scss';
 @use './sass/variables';
 .App {
-  display: flex;
+  // display: flex;
   flex-direction: column;
-  width: global.$width-fullScreen;
-  
+  // width: global.$width-fullScreen;
+  height: fit-content;
   align-items: center;
   position: relative;
+  z-index: 0;
  
 }

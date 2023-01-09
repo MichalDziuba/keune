@@ -1,11 +1,19 @@
+
 @use "../../sass//variables.scss";
 @use "../../sass/animations.scss";
+@use "../../sass/global.scss";
+
 .slider_controls_wrapper {
   display: flex;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: start;
   align-items: center;
+  
+  @include global.tablet{
+  flex-direction: row;
+
+  }
 }
 .slider__arrows {
   display: flex;
@@ -19,16 +27,30 @@
     height: 2px;
     transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
     &._dark {
-      background: variables.$color-grey-dark;
+      background: variables.$color-dark;
       animation: animations.$spread;
     }
     &._light {
-      background: variables.$color-grey;
+      background:  variables.$color-light;
       animation: animations.$spread;
+      @include global.tablet{
+    
+  }
     }
   }
+
   &_icon {
     border: solid 0.2rem;
+    width: 4.5rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+    @include global.tablet{
+  border: solid 0.2rem;
     width: 6.5rem;
     height: 6.5rem;
     border-radius: 50%;
@@ -37,12 +59,13 @@
     justify-content: center;
     font-size: 3rem;
     transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+    }
 
     &._dark {
-      border-color: variables.$color-grey-dark;
+      border-color:  variables.$color-dark;
     }
     &._light {
-      border-color: variables.$color-grey;
+      border-color:  variables.$color-light;
     }
   }
   &_svg {
@@ -50,10 +73,10 @@
     height: 1.5rem;
 
     &._dark {
-      fill: variables.$color-grey-dark;
+      fill:  variables.$color-dark;
     }
     &._light {
-      fill: variables.$color-grey;
+      fill:  variables.$color-light;
     }
   }
 }
@@ -62,14 +85,30 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+       @include global.tablet{
+      width: 33%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  }
 }
 .controls__buttons {
   display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 4rem;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 4rem;
+  margin: 0;
+   @include global.tablet{//wrocic
+     display: flex;
   flex-direction: column;
   position: relative;
   height: 4rem;
   justify-content: space-between;
   margin-bottom: 4rem;
+   }
 }
 .button_arrow_icon {
   width: 1.6rem;
@@ -80,26 +119,29 @@
   }
   &._dark {
     transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
-    fill: variables.$color-dark;
+    fill:  variables.$color-dark;
   }
   &._light {
     transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
-    fill: variables.$color-light;
+    fill:  variables.$color-light;
   }
 }
 .controls_select {
-  width: 50%;
+  display: none;
+   @include global.tablet{
+    width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: relative;
+   }
   &._dark::after {
     position: absolute;
     top: 2.5rem;
     content: "";
     width: 100%;
     height: 1px;
-    background: variables.$color-grey-dark;
+    background:  variables.$color-dark;
     transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
   }
   &._light::after {
@@ -108,7 +150,7 @@
     content: "";
     width: 100%;
     height: 1px;
-    background: variables.$color-grey;
+    background:  variables.$color-light;
     transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
   }
 }
@@ -124,8 +166,7 @@
     display: block;
     width: 100%;
     height: 0.15rem;
-    //  border-radius: 5px;
-    background-color: variables.$color-dark;
+    background-color:  variables.$color-dark;
     position: absolute;
     bottom: -10px;
     animation: animations.$spread;
@@ -144,17 +185,17 @@
 
 .button_circle {
   content: "";
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   border: 3px solid;
   border-radius: 50%;
   margin: 0;
   transform: scale(0.5);
-  margin-bottom: -1px;
+  margin-bottom: -2px;
   &._dark {
-    border-color: variables.$color-dark;
+    border-color:  variables.$color-dark;
   }
   &._light {
-    border-color: variables.$color-light;
+    border-color:  variables.$color-light;
   }
 }

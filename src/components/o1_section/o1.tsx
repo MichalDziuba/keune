@@ -21,7 +21,7 @@ export const O1 = ({ isDark, setIsDark }: o1Props) => {
     {
       imageUrl: bgImage2,
       isDark: false,
-      text1: "Z całkowitym zaangażowaniem.",
+      text1: "Z zaangażowaniem.",
       text2: "Tak, jak Ci wygodnie.",
     },
   ];

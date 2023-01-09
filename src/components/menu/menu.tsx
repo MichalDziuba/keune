@@ -1,18 +1,25 @@
-import { useState } from "react";
-
+import { useRef, useState } from "react";
+import { Dropdown } from "../dropdown/dropdown";
 import { SocialIcons } from "../socialIcons/socialLinks";
 import styles from "./menu.module.scss";
-import theme from "../../App.module.scss";
+
 type menuProps = {
   refMenu: React.RefObject<HTMLUListElement>;
   isDark: boolean;
+  
 };
 
 export const Menu = ({ refMenu, isDark }: menuProps) => {
-  // const [isOpenDropdown, setOpenDropdown] = useState(false);
+  const [isOpenDropdown, setOpenDropdown] = useState(false);
+  const refDropdown = useRef<HTMLUListElement>(null);
+
 
   return (
-    <ul className={styles.menu} ref={refMenu}>
+    <ul
+      className={styles.menu}
+      ref={refMenu}
+      onMouseEnter={() => setOpenDropdown(false)}
+    >
       <li>
         <a
           href="/nowości"
@@ -21,47 +28,30 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
           Nowości
         </a>
       </li>
-      <li className={styles.dropdown}>
-        <div className={styles.dropdown_wrapper}>
-          <a
-            href="/produkty"
-            className={`${styles.link} ${
-              isDark ? styles._dark : styles._light
-            }`}
-          >
-            Produkty
-          </a>
-          <span
-            className={isDark ? styles.arrow_dark : styles.arrow_light}
-          ></span>
-          <ul className={styles.products_list}>
-            <li>
-              <a
-                href="/szampony"
-                className={`${styles.link} ${
-                  isDark ? styles._dark : styles._light
-                }`}
-              >
-                Szampony
-              </a>
-            </li>
-            <li>
-              <a href="/odzywki">Odżywki</a>
-            </li>
-            <li>
-              <a href="/maski">Maski</a>
-            </li>
-            <li>
-              <a href="/pianki">Pianki</a>
-            </li>
-            <li>
-              <a href="/zele">Żele</a>
-            </li>
-          </ul>
-        </div>
+      <li className={styles.dropdown}
+        
+ 
+      >
+        <a
+          href="produkty"
+          className={`${styles.link} ${isDark ? styles._dark : styles._light} `}
+        >
+          Produkty
+        </a>
+
+        <Dropdown
+          refDropdown={refDropdown}
+          isDark={isDark}
+          closeDropdown={() => setOpenDropdown(false)}
+        />
+
+        <span
+          className={isDark ? styles.arrow_dark : styles.arrow_light}
+        ></span>
       </li>
       <li>
         <a
+          onMouseEnter={() => setOpenDropdown(false)}
           href="/Trendy"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >

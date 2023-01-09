@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Hamburger } from "../hamburger/hamburger";
 import { Logo } from "../logo/logo";
 import { Menu } from "../menu/menu";

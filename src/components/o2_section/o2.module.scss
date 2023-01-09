@@ -1,5 +1,21 @@
-@use '../../sass/global.scss';
-.section_wrapper{
-    height: global.$width-full;
-    width: global.$width-full;
+@use "../../sass/global.scss";
+@use "../../sass/variables.scss";
+.o2_section {
+  height: max-content;
+  width: global.$width-full;
+  display: flex;
+  flex-direction: column;
+
+ 
+}
+.items_wrapper {
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+  @include global.tablet{
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    align-items: unset;
+  }
 }

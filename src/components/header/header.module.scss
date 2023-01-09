@@ -5,8 +5,9 @@
 .header {
   display: flex;
    width: calc(global.$width-full - 5vw);
-  margin: 0 2.5vw;
   position: fixed;
+  top: 0;
+  z-index: 1;
   align-items: center;
   justify-content: space-between;
   padding: 0 2.5vw;

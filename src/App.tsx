@@ -12,7 +12,7 @@ const App = () => {
     <div className={styles.App}>
       <Header isDark={darkTheme} />
       <O1 isDark={darkTheme} setIsDark={setDarkTheme} />
-      {/* <O2/> */}
+      <O2/>
     </div>
   );
 }
