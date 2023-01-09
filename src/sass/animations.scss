@@ -2,7 +2,16 @@ $unfoldIn: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 $unfoldOut: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 $spread: spread 0.5s ease-out;
 $imageChangeColor: colorChangeBackground 2s ease-in-out;
-
+$openDropdown: openDropdown 1s forwards;
+$closeDropdown: closeDropdown 1s forwards;
+@keyframes closeDropdown {
+  0% {
+    transform: translateY(100%) scaleY(0) scaleX(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+}
 @keyframes colorChangeBackground {
   0% {
     filter: grayscale(0%);
@@ -14,6 +23,15 @@ $imageChangeColor: colorChangeBackground 2s ease-in-out;
 
   100% {
     filter: grayscale(0%);
+  }
+}
+
+@keyframes openDropdown{
+  0% {
+    transform: translateY(-100%) scaleY(0) scaleX(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
   }
 }
 

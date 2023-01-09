@@ -11,12 +11,22 @@ type menuProps = {
 export const Menu = ({ refMenu, isDark }: menuProps) => {
   const [isOpenDropdown, setOpenDropdown] = useState(false);
   const refDropdown = useRef<HTMLUListElement>(null);
-
+  const openDropdown = () => {
+    const dropdown = refDropdown.current;
+    dropdown?.classList.remove(styles.close_dropdown)
+    dropdown?.classList.add(styles.open_dropdown)
+    setOpenDropdown(true)
+  }
+  const closeDropdown = () => {
+    const dropdown = refDropdown.current;
+    dropdown?.classList.remove(styles.open_dropdown);
+        setOpenDropdown(false);
+  }
   return (
     <ul
       className={styles.menu}
       ref={refMenu}
-      onMouseEnter={() => setOpenDropdown(false)}
+      onMouseEnter={() => closeDropdown()}
     >
       <li>
         <a
@@ -26,13 +36,15 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
           Nowości
         </a>
       </li>
-      <li className={styles.dropdown}>
+      <li
+        className={styles.dropdown}
+        onMouseEnter={() => {
+          openDropdown();
+        }}
+      >
         <a
           href="produkty"
           className={`${styles.link} ${isDark ? styles._dark : styles._light} `}
-          onMouseEnter={() => {
-            refDropdown.current?.classList.add(styles.visible);
-          }}
         >
           Produkty
         </a>
@@ -40,7 +52,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
         <Dropdown
           refDropdown={refDropdown}
           isDark={isDark}
-          closeDropdown={() => setOpenDropdown(false)}
+          closeDropdown={() => closeDropdown()}
         />
 
         <span
@@ -49,7 +61,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
       </li>
       <li>
         <a
-          onMouseEnter={() => setOpenDropdown(false)}
+          onMouseEnter={() => closeDropdown()}
           href="/Trendy"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >

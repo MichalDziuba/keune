@@ -1,8 +1,9 @@
 @use "../../sass/animations.scss";
 @use "../../sass/global.scss";
 @use "../../sass/variables.scss";
-.visible{
+.open_dropdown {
   display: flex;
+  animation: animations.$openDropdown;
 }
 
 
@@ -34,8 +35,8 @@
 }
 .link {
   display: flex;
-  flex-direction: column; 
-  
+  flex-direction: column;
+
   font-size: 2rem;
   font-weight: 400;
   color: variables.$color-light;
@@ -59,16 +60,14 @@
   }
 }
 
-
 .dropdown {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include global.desktop{
-display: block;
+  @include global.desktop {
+    display: block;
   }
- 
 }
 
 .arrow_light::before {
