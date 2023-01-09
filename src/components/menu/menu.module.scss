@@ -1,7 +1,9 @@
 @use "../../sass/animations.scss";
 @use "../../sass/global.scss";
 @use "../../sass/variables.scss";
-
+.visible{
+  display: flex;
+}
 
 
 .menu {
@@ -59,10 +61,13 @@
 
 
 .dropdown {
-position: relative;
-width: min-content;
-display: flex;
-height: 50rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include global.desktop{
+display: block;
+  }
  
 }
 

@@ -3,13 +3,28 @@
 
 .dropdown_list{
     
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
- 
-    display: flex;
-}
 
+  display: none;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 2rem;
+  
+@include global.desktop{
+    position: absolute;
+}
+}
+.dropdown_list li:last-of-type {
+ position: relative;
+ &::after{
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: inherit;
+    height: 0.2rem;
+    
+ }
+}
 
 
 .link {

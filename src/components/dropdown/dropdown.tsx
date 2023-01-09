@@ -4,7 +4,11 @@ type dropdownProps = {
   closeDropdown: () => void;
   refDropdown: React.RefObject<HTMLUListElement>;
 };
-export const Dropdown = ({ isDark, closeDropdown, refDropdown }: dropdownProps) => {
+export const Dropdown = ({
+  isDark,
+  closeDropdown,
+  refDropdown,
+}: dropdownProps) => {
   return (
     <ul
       className={styles.dropdown_list}

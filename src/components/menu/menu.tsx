@@ -6,13 +6,11 @@ import styles from "./menu.module.scss";
 type menuProps = {
   refMenu: React.RefObject<HTMLUListElement>;
   isDark: boolean;
-  
 };
 
 export const Menu = ({ refMenu, isDark }: menuProps) => {
   const [isOpenDropdown, setOpenDropdown] = useState(false);
   const refDropdown = useRef<HTMLUListElement>(null);
-
 
   return (
     <ul
@@ -28,13 +26,13 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
           Nowości
         </a>
       </li>
-      <li className={styles.dropdown}
-        
- 
-      >
+      <li className={styles.dropdown}>
         <a
           href="produkty"
           className={`${styles.link} ${isDark ? styles._dark : styles._light} `}
+          onMouseEnter={() => {
+            refDropdown.current?.classList.add(styles.visible);
+          }}
         >
           Produkty
         </a>
