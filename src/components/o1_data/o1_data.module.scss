@@ -1,4 +1,3 @@
-
 @use "../../sass/global.scss";
 @use "../../sass/variables.scss";
 
@@ -7,17 +6,16 @@
   flex-direction: column;
   height: 100%;
   margin: 0;
-  
-  &._dark{
-color: variables.$color-dark;
-  transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+
+  &._dark {
+    color: variables.$color-dark;
+    transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
   }
-  &._light{
-    color:variables.$color-light;
-      transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+  &._light {
+    color: variables.$color-light;
+    transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
   }
 }
-
 
 .content_title {
   display: inline-block;
@@ -30,12 +28,11 @@ color: variables.$color-dark;
   z-index: 0;
   font-weight: 400;
   margin-bottom: 1rem;
-  @include global.tablet{
+  @include global.tablet {
     font-size: 7rem;
   }
-  @include global.desktop{
+  @include global.desktop {
     font-size: 9rem;
-    
   }
   &::after {
     position: absolute;
@@ -54,30 +51,29 @@ color: variables.$color-dark;
   margin: 0;
   word-spacing: 0.2rem;
   letter-spacing: 0.2rem;
-   @include global.tablet{
+  @include global.tablet {
     font-size: 3rem;
   }
-  @include global.desktop{
+  @include global.desktop {
     font-size: 4rem;
   }
 }
 .content_keune {
   font-size: 1.8rem;
-  @include global.tablet{
+  @include global.tablet {
     font-size: 2rem;
   }
-  @include global.desktop{
-    font-size:3rem;
+  @include global.desktop {
+    font-size: 3rem;
   }
   & span {
     font-size: 1.8rem;
     font-weight: 500;
-    @include global.tablet{
-    font-size: 2rem;
-  }
-   @include global.desktop{
-    font-size: 3rem;
-  }
+    @include global.tablet {
+      font-size: 2rem;
+    }
+    @include global.desktop {
+      font-size: 3rem;
+    }
   }
 }
-

@@ -1,7 +1,12 @@
+
 @use '../../sass/animations.scss';
 @use '../../sass/global.scss';
 @use '../../sass/variables.scss';
 
+.scrolled{
+  background-color: variables.$bg-dark;
+  color:variables.$color-light;
+}
 .header {
   display: flex;
    width: calc(global.$width-full - 5vw);

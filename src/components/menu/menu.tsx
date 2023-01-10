@@ -11,18 +11,18 @@ type menuProps = {
 export const Menu = ({ refMenu, isDark }: menuProps) => {
   const [isOpenDropdown, setOpenDropdown] = useState(false);
   const refDropdown = useRef<HTMLUListElement>(null);
-  const openDropdown = () => {
-    
+
+  const handleDropdown = () => {
     const dropdown = refDropdown.current;
-    dropdown?.classList.remove(styles.close_dropdown)
-    dropdown?.classList.add(styles.open_dropdown)
-    setOpenDropdown(true)
-  }
+    dropdown?.classList.toggle(styles.open_dropdown);
+    setOpenDropdown(!isOpenDropdown);
+  };
+
   const closeDropdown = () => {
     const dropdown = refDropdown.current;
     dropdown?.classList.remove(styles.open_dropdown);
-        setOpenDropdown(false);
-  }
+    setOpenDropdown(false);
+  };
   return (
     <ul
       className={styles.menu}
@@ -37,17 +37,11 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
           Nowości
         </a>
       </li>
-      <li
-        className={styles.dropdown}
-       
-        onMouseEnter={() => {
-          openDropdown();
-        }}
-      >
+      <li className={styles.dropdown}>
         <a
           onClick={(e) => {
             e.preventDefault();
-           
+            handleDropdown();
           }}
           href="produkty"
           className={`${styles.link} ${isDark ? styles._dark : styles._light} `}

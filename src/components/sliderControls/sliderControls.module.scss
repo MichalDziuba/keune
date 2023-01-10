@@ -1,4 +1,3 @@
-
 @use "../../sass//variables.scss";
 @use "../../sass/animations.scss";
 @use "../../sass/global.scss";
@@ -9,10 +8,9 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  
-  @include global.tablet{
-  flex-direction: row;
 
+  @include global.tablet {
+    flex-direction: row;
   }
 }
 .slider__arrows {
@@ -31,11 +29,10 @@
       animation: animations.$spread;
     }
     &._light {
-      background:  variables.$color-light;
+      background: variables.$color-light;
       animation: animations.$spread;
-      @include global.tablet{
-    
-  }
+      @include global.tablet {
+      }
     }
   }
 
@@ -49,23 +46,23 @@
     justify-content: center;
     font-size: 3rem;
     transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
-    @include global.tablet{
-  border: solid 0.2rem;
-    width: 6.5rem;
-    height: 6.5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+    @include global.tablet {
+      border: solid 0.2rem;
+      width: 6.5rem;
+      height: 6.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
     }
 
     &._dark {
-      border-color:  variables.$color-dark;
+      border-color: variables.$color-dark;
     }
     &._light {
-      border-color:  variables.$color-light;
+      border-color: variables.$color-light;
     }
   }
   &_svg {
@@ -73,10 +70,10 @@
     height: 2rem;
 
     &._dark {
-      fill:  variables.$color-dark;
+      fill: variables.$color-dark;
     }
     &._light {
-      fill:  variables.$color-light;
+      fill: variables.$color-light;
     }
   }
 }
@@ -85,11 +82,11 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-       @include global.tablet{
-      width: 33%;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  @include global.tablet {
+    width: 33%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 }
 .controls__buttons {
@@ -101,14 +98,14 @@
   width: 100%;
   margin-bottom: 4rem;
   margin: 0;
-   @include global.tablet{//wrocic
-     display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 4rem;
-  justify-content: space-between;
-  margin-bottom: 4rem;
-   }
+  @include global.tablet {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 4rem;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
 }
 .button_arrow_icon {
   width: 1.6rem;
@@ -119,29 +116,29 @@
   }
   &._dark {
     transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
-    fill:  variables.$color-dark;
+    fill: variables.$color-dark;
   }
   &._light {
     transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
-    fill:  variables.$color-light;
+    fill: variables.$color-light;
   }
 }
 .controls_select {
   display: none;
-   @include global.tablet{
+  @include global.tablet {
     width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: relative;
-   }
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+  }
   &._dark::after {
     position: absolute;
     top: 2.5rem;
     content: "";
     width: 100%;
     height: 1px;
-    background:  variables.$color-dark;
+    background: variables.$color-dark;
     transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
   }
   &._light::after {
@@ -150,7 +147,7 @@
     content: "";
     width: 100%;
     height: 1px;
-    background:  variables.$color-light;
+    background: variables.$color-light;
     transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
   }
 }
@@ -166,7 +163,7 @@
     display: block;
     width: 100%;
     height: 0.15rem;
-    background-color:  variables.$color-dark;
+    background-color: variables.$color-dark;
     position: absolute;
     bottom: -10px;
     animation: animations.$spread;
@@ -193,9 +190,9 @@
   transform: scale(0.5);
   margin-bottom: -2px;
   &._dark {
-    border-color:  variables.$color-dark;
+    border-color: variables.$color-dark;
   }
   &._light {
-    border-color:  variables.$color-light;
+    border-color: variables.$color-light;
   }
 }

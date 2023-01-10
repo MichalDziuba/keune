@@ -11,6 +11,7 @@
   align-items: flex-end;
   color: variables.$color-light;
   margin-bottom: 0.2rem;
+  overflow: hidden;
   &:hover {
     animation: animations.$imageChangeColor;
     -webkit-box-shadow: variables.$shadow-image;
@@ -115,4 +116,7 @@
     width: 1.6rem;
     height: 1.6rem;
   }
+}
+.scrollText {
+  animation: animations.$scrollText;
 }

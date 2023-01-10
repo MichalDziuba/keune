@@ -1,22 +1,17 @@
-@use '../../sass/variables.scss';
-@use '../../sass/global.scss';
+@use "../../sass/variables.scss";
+@use "../../sass/global.scss";
 
-.dropdown_list{
-    
-
+.dropdown_list {
   display: none;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
   margin-top: 2rem;
-  
-  
-@include global.desktop{
+
+  @include global.desktop {
     position: absolute;
+  }
 }
-}
-
-
 
 .link {
   font-size: 1.8rem;

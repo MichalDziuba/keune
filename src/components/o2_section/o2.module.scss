@@ -5,17 +5,15 @@
   width: global.$width-full;
   display: flex;
   flex-direction: column;
-
- 
 }
 .items_wrapper {
   display: flex;
   flex-direction: column;
-   align-items: center;
-  @include global.tablet{
+  align-items: center;
+  @include global.tablet {
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     align-items: unset;
   }
 }

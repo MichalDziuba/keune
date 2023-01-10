@@ -12,6 +12,7 @@
   align-items: flex-end;
   color: variables.$color-light;
   margin-bottom: 0.2rem;
+  overflow: hidden;
   &:hover {
     animation: animations.$imageChangeColor;
     -webkit-box-shadow: variables.$shadow-image;
@@ -41,7 +42,7 @@
   flex-direction: row;
   padding-bottom: 1rem;
   @include global.desktop {
-     padding-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -129,4 +130,7 @@
   .icon_arrow {
     transform: scale(1.3);
   }
+}
+.scrollText {
+  animation: animations.$scrollText;
 }

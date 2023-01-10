@@ -1,13 +1,13 @@
-@use '../../sass/global.scss';
-@use '../../sass//variables.scss';
+@use "../../sass/global.scss";
+@use "../../sass//variables.scss";
 .socialLinksWrapper {
   display: flex;
   position: relative;
   width: 4.5rem;
   height: 4.5rem;
-    transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   &:hover {
-     transform: scale(1.5) rotate(360deg);
+    transform: scale(1.5) rotate(360deg);
   }
 }
 
@@ -20,13 +20,12 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    
   }
 
   &.instagram {
     bottom: 0;
     left: 50%;
-    
+
     transform: translate(-50%, 0);
   }
 

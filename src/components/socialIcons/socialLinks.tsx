@@ -11,9 +11,8 @@ import styles from "./socialLinks.module.scss";
 import { useEffect, useState } from "react";
 type socialIconsProps = {
   isDark: boolean;
-}
+};
 export const SocialIcons = ({ isDark }: socialIconsProps) => {
-  
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -25,7 +24,6 @@ export const SocialIcons = ({ isDark }: socialIconsProps) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
 
   return (
     <div className={styles.socialLinksWrapper}>

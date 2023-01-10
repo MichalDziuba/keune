@@ -17,22 +17,19 @@
 }
 .o1_content {
   position: absolute;
-  bottom: 12vh;
+  bottom: 13vh;
   left: 10%;
   width: 80vw;
   height: 35vh;
   display: flex;
   flex-direction: column;
 
- @include global.tablet{
-  height: 45vh;
- }
+  @include global.tablet {
+    height: 45vh;
+  }
 }
 
 .content {
   display: flex;
   justify-content: center;
 }
-
-
-

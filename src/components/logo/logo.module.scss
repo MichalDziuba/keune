@@ -1,23 +1,21 @@
-@use '../../sass/global.scss';
-@use '../../sass/variables.scss';
+@use "../../sass/global.scss";
+@use "../../sass/variables.scss";
 .logo {
-  
   width: 9rem;
   height: 3.3rem;
-  @include global.desktop{
-    width:16.5rem ;
+  @include global.desktop {
+    width: 16.5rem;
     height: 7rem;
   }
-  & h1{
+  & h1 {
     display: none;
   }
-  & img{
- width: 9rem;
- height: 3.3rem;
-  @include global.desktop{
-    width:16.5rem ;
-    height: 7rem;
+  & img {
+    width: 9rem;
+    height: 3.3rem;
+    @include global.desktop {
+      width: 16.5rem;
+      height: 7rem;
+    }
   }
-  }
-  
 }

@@ -3,7 +3,10 @@
 @use "../../sass/variables.scss";
 .open_dropdown {
   display: flex;
-  animation: animations.$openDropdown;
+  animation: animations.$openDropDownMobile;
+  @include global.desktop {
+    animation: animations.$openDropdown;
+  }
 }
 
 .menu {
@@ -64,6 +67,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
   @include global.desktop {
     display: block;
   }

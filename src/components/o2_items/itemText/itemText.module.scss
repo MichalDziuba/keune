@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   transition: 0.5s all;
-  
+
   @media screen and (min-width: 425px) {
     height: 30rem;
   }
@@ -30,7 +30,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
 
   & h3 {
     font-size: 8rem;
@@ -60,13 +59,11 @@
     @media screen and (min-width: 425px) {
       font-size: 4rem;
     }
-    
   }
 }
 .item:hover .item_content p,
-.item:hover .item_content h3{
-    color: variables.$color-hoverBtn;
-        transform: scale(1.1);
-  }
-
-
+.item:hover .item_content h3 {
+   transition: 200ms cubic-bezier(1, 0.08, 0.33, 0.95);
+  color: variables.$color-hoverBtn;
+  transform: scale(1.1);
+}

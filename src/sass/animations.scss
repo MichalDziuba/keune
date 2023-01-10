@@ -2,16 +2,54 @@ $unfoldIn: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 $unfoldOut: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 $spread: spread 0.5s ease-out;
 $imageChangeColor: colorChangeBackground 2s ease-in-out;
-$openDropdown: openDropdown 1s forwards;
-$closeDropdown: closeDropdown 1s forwards;
-@keyframes closeDropdown {
+$openDropdown: openDropdown 0.3s forwards;
+$openDropDownMobile: openDropDownMobile 0.3s forwards;
+$scrollText: scroll-text 0.7s ease-in-out forwards;
+
+@keyframes scroll-text {
   0% {
-    transform: translateY(100%) scaleY(0) scaleX(0);
+    transform: translateY(0);
   }
+  25% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.4;
+  }
+
   100% {
-    transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0);
   }
 }
+
+@keyframes openDropDownMobile {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes openDropdown {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes colorChangeBackground {
   0% {
     filter: grayscale(0%);
@@ -23,15 +61,6 @@ $closeDropdown: closeDropdown 1s forwards;
 
   100% {
     filter: grayscale(0%);
-  }
-}
-
-@keyframes openDropdown{
-  0% {
-    transform: translateY(-100%) scaleY(0) scaleX(0);
-  }
-  100% {
-    transform: translateY(0) scaleY(1) scaleX(1);
   }
 }
 

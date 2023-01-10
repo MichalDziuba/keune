@@ -11,7 +11,7 @@ type o1Props = {
   setIsDark: (isDark: boolean) => void;
 };
 export const O1 = ({ isDark, setIsDark }: o1Props) => {
-  //ref to SilderComponent
+  //ref to SliderComponent
   const slideRef = useRef<SlideshowRef>(null);
   // state for the index of the current background image
   const [bgImageIndex, setBgImageIndex] = useState(0);
