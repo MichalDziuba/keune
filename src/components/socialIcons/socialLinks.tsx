@@ -13,12 +13,14 @@ type socialIconsProps = {
   isDark: boolean;
 };
 export const SocialIcons = ({ isDark }: socialIconsProps) => {
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     function handleResize() {
-      setWindowWidth(window.innerWidth);
+      setWindowWidth(window.innerWidth); // keep track of window width
     }
+    //if window width is smaller than 1024 all icons are white
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);

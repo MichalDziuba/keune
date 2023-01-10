@@ -9,15 +9,18 @@ type menuProps = {
 };
 
 export const Menu = ({ refMenu, isDark }: menuProps) => {
+  // State to keep track of whether the dropdown menu is open or closed
   const [isOpenDropdown, setOpenDropdown] = useState(false);
+  // Ref to the dropdown menu
   const refDropdown = useRef<HTMLUListElement>(null);
-
+  // Function to toggle the open/close state of the dropdown menu
   const handleDropdown = () => {
     const dropdown = refDropdown.current;
+    // toggle the class for open/close styling
     dropdown?.classList.toggle(styles.open_dropdown);
     setOpenDropdown(!isOpenDropdown);
   };
-
+  // Function to close the dropdown menu
   const closeDropdown = () => {
     const dropdown = refDropdown.current;
     dropdown?.classList.remove(styles.open_dropdown);
@@ -26,7 +29,9 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
   return (
     <ul
       className={styles.menu}
+      // This ref is used to get a reference to the <ul> element
       ref={refMenu}
+      // close dropdown on mouse enter
       onMouseEnter={() => closeDropdown()}
     >
       <li>
@@ -39,6 +44,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
       </li>
       <li className={styles.dropdown}>
         <a
+          //open close function for dropdown
           onClick={(e) => {
             e.preventDefault();
             handleDropdown();
@@ -54,13 +60,13 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
           isDark={isDark}
           closeDropdown={() => closeDropdown()}
         />
-
         <span
           className={isDark ? styles.arrow_dark : styles.arrow_light}
         ></span>
       </li>
       <li>
         <a
+          // close dropdown on mouse enter
           onMouseEnter={() => closeDropdown()}
           href="/Trendy"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}

@@ -10,14 +10,17 @@ import { ItemSmall } from "../o2_items/itemSmall/itemSmall";
 export const O2 = () => {
   return (
     <section className={styles.o2_section}>
+      {/* first wrapper with text and large item */}
       <div className={styles.items_wrapper}>
         <ItemText />
         <ItemLarge image={care} text="CARE" />
       </div>
+      {/* second wrapper with small and large item */}
       <div className={styles.items_wrapper}>
         <ItemSmall image={design} text="DESIGN" />
         <ItemLarge image={blend} text="BLEND" />
       </div>
+      {/* third wrapper with large and small item */}
       <div className={styles.items_wrapper}>
         <ItemLarge image={koloryzacja} text="KOLORYZACJA" />
         <ItemSmall image={pure} text="SO PURE" />

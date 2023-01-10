@@ -7,9 +7,10 @@ type ItemSmallProps = {
   text: string;
 };
 export const ItemSmall = ({ image, text }: ItemSmallProps) => {
+  // Create refs for text and link
   const refTextKeune = useRef<HTMLHeadingElement>(null);
   const refTextLink = useRef<HTMLDivElement>(null);
-
+  // function to handle toggle animation
   const animationToggle = () => {
     const animationText = styles.scrollText;
     const textKeune = refTextKeune.current!;
@@ -22,6 +23,7 @@ export const ItemSmall = ({ image, text }: ItemSmallProps) => {
     <div
       className={styles.item}
       style={{ backgroundImage: `url(${image})` }}
+      // Add event handlers to toggle the animation when hovering
       onMouseEnter={animationToggle}
       onMouseLeave={animationToggle}
     >

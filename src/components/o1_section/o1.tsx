@@ -44,7 +44,7 @@ export const O1 = ({ isDark, setIsDark }: o1Props) => {
   };
 
   return (
-    <Slide  ref={slideRef} {...properties}>
+    <Slide ref={slideRef} {...properties}>
       {bgImages.map((image, index) => (
         <div
           className={`${styles.o1_section} ${"each-slide-effect"}`}
@@ -52,11 +52,13 @@ export const O1 = ({ isDark, setIsDark }: o1Props) => {
           style={{ backgroundImage: `url(${image.imageUrl})` }}
         >
           <div className={styles.o1_content}>
-            <div>{index}</div>
+   
+            {/* Render the O1Data component and pass the texts and isDark props */}
             <O1Data
               texts={[bgImages[index].text1, bgImages[index].text2]}
               isDark={isDark}
             />
+            {/* Render the SliderControls component and pass isDark, bgImageIndex,handleLeftArrow,handleRightArrow props,setSelectedBackground */}
             <SliderControls
               isDark={isDark}
               bgImageIndex={bgImageIndex}

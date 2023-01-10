@@ -7,8 +7,10 @@ type ItemLargeProps = {
 };
 
 export const ItemLarge = ({ image, text }: ItemLargeProps) => {
+  //ref to textKeune and refTextLink
   const refTextKeune = useRef<HTMLHeadingElement>(null);
   const refTextLink = useRef<HTMLDivElement>(null);
+  // toggle animation for text keune and text link
   const animationToggle = () => {
     const animationText = styles.scrollText;
     const textKeune = refTextKeune.current!;
@@ -19,6 +21,7 @@ export const ItemLarge = ({ image, text }: ItemLargeProps) => {
 
   return (
     <div
+      // Add event handlers to toggle the animation when hovering
       onMouseEnter={animationToggle}
       onMouseLeave={animationToggle}
       className={`${styles.item} ${styles.color_change_bg}`}

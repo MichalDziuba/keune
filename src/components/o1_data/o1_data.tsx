@@ -7,6 +7,7 @@ export const O1Data = ({ texts, isDark }: O1DataProps) => {
   return (
     <div
       className={`${styles.content_wrapper} ${
+        // Add the dark or light class based on the isDark prop
         isDark ? styles._dark : styles._light
       }`}
     >
