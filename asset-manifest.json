@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/keune/static/css/main.a8978d8b.css",
-    "main.js": "/keune/static/js/main.30ed6e81.js",
+    "main.js": "/keune/static/js/main.78200085.js",
     "static/js/787.9a2a77af.chunk.js": "/keune/static/js/787.9a2a77af.chunk.js",
     "static/media/slide3-big.jpg": "/keune/static/media/slide3-big.b73f76e8ac98591144b6.jpg",
     "static/media/slide2-big.jpg": "/keune/static/media/slide2-big.12c4cf6c15fdbdd058fe.jpg",
@@ -11,25 +11,25 @@
     "static/media/04_koloryzacja.jpg": "/keune/static/media/04_koloryzacja.ae2806a8ff1de3b55f3a.jpg",
     "static/media/02_design.jpg": "/keune/static/media/02_design.71d9a770542f8177d10d.jpg",
     "static/media/05_so_pure.jpg": "/keune/static/media/05_so_pure.6b1a735991dbd047b2af.jpg",
-    "static/media/logo_KEUNE.svg": "/keune/static/media/logo_KEUNE.a335245af1f4afb96e236ea058da4ecc.svg",
-    "static/media/logo_KEUNE_WHITE.svg": "/keune/static/media/logo_KEUNE_WHITE.5e34c57b00e0cdf0e4be1fdca4c08d91.svg",
-    "static/media/znak_keune_WHITE.svg": "/keune/static/media/znak_keune_WHITE.31bd089a40b525d3d610e05bd0679b9e.svg",
-    "static/media/znak_keune.svg": "/keune/static/media/znak_keune.2beccfcd985764ec95d09a4cc01051d8.svg",
-    "static/media/twitter_WHITE.svg": "/keune/static/media/twitter_WHITE.1f5e99d5a235a9078673e97aadbfe29e.svg",
-    "static/media/twitter.svg": "/keune/static/media/twitter.15927945aabfd72932b48259d96f7110.svg",
-    "static/media/fb_WHITE.svg": "/keune/static/media/fb_WHITE.93304de561eda9cfb9725ed50badf8d4.svg",
-    "static/media/fb.svg": "/keune/static/media/fb.b3843a186a5ea4177ab084e4f6d95244.svg",
+    "static/media/logo_KEUNE.svg": "/keune/static/media/logo_KEUNE.85184957352bca89e3159aae72588897.svg",
+    "static/media/logo_KEUNE_WHITE.svg": "/keune/static/media/logo_KEUNE_WHITE.64ee430264e0cf55bce7f615c086029d.svg",
+    "static/media/znak_keune_WHITE.svg": "/keune/static/media/znak_keune_WHITE.fce160ecd5bc10299e7c67979a4a760c.svg",
+    "static/media/znak_keune.svg": "/keune/static/media/znak_keune.18a528c08644b2cdc48a8fd6bda424ef.svg",
+    "static/media/twitter_WHITE.svg": "/keune/static/media/twitter_WHITE.a6b1aee40963194a93dc066f729b39d5.svg",
+    "static/media/twitter.svg": "/keune/static/media/twitter.48f6b106848d0684b8fc9ae31d88dec5.svg",
+    "static/media/fb_WHITE.svg": "/keune/static/media/fb_WHITE.0d4e1aa00896e0e6760e041277d6ae26.svg",
+    "static/media/fb.svg": "/keune/static/media/fb.505fed906f3f4affeceec3b95baf3af0.svg",
     "index.html": "/keune/index.html",
-    "static/media/yt_WHITE.svg": "/keune/static/media/yt_WHITE.ae23a7493a22a9e8cf91951a0154f890.svg",
-    "static/media/yt.svg": "/keune/static/media/yt.17da15ee043cdfe48a7f37fee5d9e57b.svg",
-    "static/media/insta_WHITE.svg": "/keune/static/media/insta_WHITE.9d9b61500ea739588c8eb2db68edba99.svg",
-    "static/media/insta.svg": "/keune/static/media/insta.e29a0c9e6c2efe358062faa94ea1e383.svg",
+    "static/media/yt_WHITE.svg": "/keune/static/media/yt_WHITE.634e380a3194f2e93f7d1728681915a6.svg",
+    "static/media/yt.svg": "/keune/static/media/yt.bb43bfb55b56706fd0d9ad471687ed6e.svg",
+    "static/media/insta_WHITE.svg": "/keune/static/media/insta_WHITE.d71a169fb75f0a07eb986da392fa1451.svg",
+    "static/media/insta.svg": "/keune/static/media/insta.8f1ab155f731ded4de82d881dd55e6e8.svg",
     "main.a8978d8b.css.map": "/keune/static/css/main.a8978d8b.css.map",
-    "main.30ed6e81.js.map": "/keune/static/js/main.30ed6e81.js.map",
+    "main.78200085.js.map": "/keune/static/js/main.78200085.js.map",
     "787.9a2a77af.chunk.js.map": "/keune/static/js/787.9a2a77af.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a8978d8b.css",
-    "static/js/main.30ed6e81.js"
+    "static/js/main.78200085.js"
   ]
 }
