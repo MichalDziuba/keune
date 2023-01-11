@@ -20,6 +20,7 @@ export const Dropdown = ({
       <li>
         <a
           href="/szampony"
+          target="_blank"
           // Conditionally applying styles depending on the color
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
@@ -29,6 +30,7 @@ export const Dropdown = ({
       <li>
         <a
           href="/odzywki"
+          target="_blank"
           // Conditionally applying styles depending on the color
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
@@ -38,6 +40,7 @@ export const Dropdown = ({
       <li>
         <a
           href="/maski"
+          target="_blank"
           // Conditionally applying styles depending on the color
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
@@ -47,6 +50,7 @@ export const Dropdown = ({
       <li>
         <a
           href="/pianki"
+          target="_blank"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
           Pianki
@@ -55,6 +59,7 @@ export const Dropdown = ({
       <li>
         <a
           href="/zele"
+          target="_blank"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
           Żele

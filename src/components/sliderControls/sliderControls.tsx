@@ -29,6 +29,7 @@ export const SliderControls = ({
         ></div>
         <a
           href="/next-section"
+          target="_blank"
           className={`${styles.slider__arrows_icon} ${
             isDark ? styles._dark : styles._light
           }`}

@@ -29,7 +29,7 @@ export const SocialIcons = ({ isDark }: socialIconsProps) => {
 
   return (
     <div className={styles.socialLinksWrapper}>
-      <a href="/facebook">
+      <a href="/facebook" target="_blank">
         {windowWidth < 1024 ? (
           <FacebookIconWhite className={`${styles.icon} ${styles.facebook}`} />
         ) : isDark ? (
@@ -38,7 +38,7 @@ export const SocialIcons = ({ isDark }: socialIconsProps) => {
           <FacebookIconWhite className={`${styles.icon} ${styles.facebook}`} />
         )}
       </a>
-      <a href="/youtube">
+      <a href="/youtube" target="_blank">
         {windowWidth < 1024 ? (
           <YoutubeIconWhite className={`${styles.icon} ${styles.youtube}`} />
         ) : isDark ? (
@@ -47,7 +47,7 @@ export const SocialIcons = ({ isDark }: socialIconsProps) => {
           <YoutubeIconWhite className={`${styles.icon} ${styles.youtube}`} />
         )}
       </a>
-      <a href="/twitter">
+      <a href="/twitter" target="_blank">
         {windowWidth < 1024 ? (
           <TwitterIconWhite className={`${styles.icon} ${styles.twitter}`} />
         ) : isDark ? (
@@ -56,7 +56,7 @@ export const SocialIcons = ({ isDark }: socialIconsProps) => {
           <TwitterIconWhite className={`${styles.icon} ${styles.twitter}`} />
         )}
       </a>
-      <a href="/instagram">
+      <a href="/instagram" target="_blank">
         {windowWidth < 1024 ? (
           <InstagramIconWhite
             className={`${styles.icon} ${styles.instagram}`}

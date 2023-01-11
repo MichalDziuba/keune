@@ -10,16 +10,16 @@ export const Logo = ({ isDark }: logoProps) => {
   return (
     <>
       {isDark ? (
-       // The logo image that changes based on the value of isDark prop
+        // The logo image that changes based on the value of isDark prop
         <div className={styles.logo}>
-          <a href="/">
+          <a href="/" target="_blank">
             <img src={logoKeune} alt="logo" />
           </a>
           <h1>Keune Polska</h1>
         </div>
       ) : (
         <div className={styles.logo}>
-          <a href="/">
+          <a href="/" target="_blank">
             <img src={logoKeuneWhite} alt="logo" />
           </a>
           <h1>Keune Polska</h1>

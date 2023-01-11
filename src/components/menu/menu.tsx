@@ -36,6 +36,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
     >
       <li>
         <a
+          target="_blank"
           href="/nowości"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
@@ -50,6 +51,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
             handleDropdown();
           }}
           href="produkty"
+          target="_blank"
           className={`${styles.link} ${isDark ? styles._dark : styles._light} `}
         >
           Produkty
@@ -69,6 +71,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
           // close dropdown on mouse enter
           onMouseEnter={() => closeDropdown()}
           href="/Trendy"
+          target="_blank"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
           Trendy
@@ -77,6 +80,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
       <li>
         <a
           href="/o-firmie"
+          target="_blank"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
           O firmie
@@ -85,6 +89,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
       <li>
         <a
           href="/salony"
+          target="_blank"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
           Salony
@@ -93,6 +98,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
       <li>
         <a
           href="/dystrybutorzy"
+          target="_blank"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
           Dystrybutorzy
@@ -101,6 +107,7 @@ export const Menu = ({ refMenu, isDark }: menuProps) => {
       <li>
         <a
           href="/nowości"
+          target="_blank"
           className={`${styles.link} ${isDark ? styles._dark : styles._light}`}
         >
           Kontakt
